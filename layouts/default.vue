@@ -25,7 +25,7 @@
 		min-height: 100vh
 
 	body
-		background: linear-gradient(90deg, #292941 0%, #007BFF 50%, #0000FF 100%)
+		background: #292941
 		min-height: 100vh
 		display: flex
 		flex-direction: column

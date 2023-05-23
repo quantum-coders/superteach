@@ -1,5 +1,5 @@
 <template>
-        <h1>Hola mundooooooooooooooooooo</h1>
+        <index-courses />
 </template>
 
 <script>
