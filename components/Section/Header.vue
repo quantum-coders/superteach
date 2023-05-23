@@ -21,7 +21,7 @@
 			</div>
 
 			<!-- Logo -->
-			<a class="navbar-brand mx-auto justify-content-center text-center" href="#"><img class="w-25" src="/superteamlogo.png" alt="Logo"></a>
+			<a class="navbar-brand mx-auto justify-content-center text-center" @click="goToHome" href="#"><img class="w-25" src="/superteamlogo.png" alt="Logo"></a>
 
 			<!-- Right Side -->
 			<div class="d-flex">
@@ -57,7 +57,10 @@
 
 const isMenuOpen = ref(false)
 const modal = ref(false)
-
+const router = useRouter()
+const goToHome = () => {
+	router.push('/')
+}
 const openModal = () => {
 	modal.value = !modal.value
 }
