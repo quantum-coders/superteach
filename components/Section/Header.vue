@@ -28,18 +28,39 @@
 				<!-- Get AI Guide -->
 				<button class="btn me-2" type="button">Get AI Guide</button>
 				<!-- Login -->
-				<button class="btn me-2" type="button">Login</button>
+				<button class="btn me-2" type="button" @click="openModal" >Login</button>
 				<!-- Sign Up -->
-				<button class="btn" type="button">Sign Up</button>
+				<button class="btn" type="button" @click="openModal">Sign Up</button>
 			</div>
 		</div>
 	</nav>
+	<!-- Modal -->
+	<div v-if="modal" class="modal fade show d-block" tabindex="-1" aria-labelledby="exampleModalLabel" aria-modal="true" role="dialog">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 id="exampleModalLabel" class="modal-title">¡Bienvenido a nuestra página!</h5>
+					<button type="button" @click="openModal" class="btn-close"></button>
+				</div>
+				<div class="modal-body d-flex justify-content-center">
+					<button type="button" @click="openModal" class="btn btn-primary">
+						<font-awesome-icon :icon="['fab', 'google']" /> Iniciar sesión con Google
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
 
 <script setup>
 
 const isMenuOpen = ref(false)
+const modal = ref(false)
+
+const openModal = () => {
+	modal.value = !modal.value
+}
 const toggleMenu = () => {
 	isMenuOpen.value = !isMenuOpen.value
 }
@@ -80,5 +101,22 @@ const toggleMenu = () => {
 			}
 		}
 	}
+}
+.modal-content {
+	background-color: #292941;
+	color: #ffffff;
+}
+
+.btn-primary {
+	background-color: #3949ab;
+	border-color: #3949ab;
+}
+
+.btn-primary:hover {
+	background-color: #303f9f;
+	border-color: #303f9f;
+}
+.modal {
+	background: rgba(0,0,0,0.5);
 }
 </style>

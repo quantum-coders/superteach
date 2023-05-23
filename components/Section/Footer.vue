@@ -44,28 +44,20 @@
             <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <h5 class="text-uppercase mb-0">Follow Us</h5>
-
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#!" class="btn btn-outline-light btn-floating m-1">
-                            <i class="fab fa-discord"></i>
-                        </a>
+                        <a href="" class="btn btn-outline-light btn-floating m-1">
+							<i>
+							<font-awesome-icon :icon="['fab', 'discord']" size="sm" />
+							</i>
+						</a>
                     </li>
                     <li>
                         <a href="#!" class="btn btn-outline-light btn-floating m-1">
-                            <i class="fab fa-telegram"></i>
+							<font-awesome-icon :icon="['fab', 'telegram']" size="sm"/>
                         </a>
                     </li>
-                    <li>
-                        <a href="#!" class="btn btn-outline-light btn-floating m-1">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#!" class="btn btn-outline-light btn-floating m-1">
-                            <i class="fab fa-reddit"></i>
-                        </a>
-                    </li>
+
                 </ul>
             </div>
             <!--Grid column-->
@@ -83,9 +75,12 @@
 </template>
 
 <script>
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+
 export default {
+	components:{FontAwesomeIcon},
     setup () {
-        
+
 
         return {}
     }
